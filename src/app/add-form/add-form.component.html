@@ -21,4 +21,7 @@
   <strong>Test strong tag in TodoItem component</strong>
   <br>
   <span class="blue">Test blue class in the span tag</span>
+  <br>
+  <!--use ngClass to import style which is quiet same as using class in this way-->
+  <span [ngClass]="getBlueClass()">Test ngClass in the span tag</span>
 </div>

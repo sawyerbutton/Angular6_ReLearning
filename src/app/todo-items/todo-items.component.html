@@ -9,7 +9,9 @@
 <mat-list *ngFor="let item of items">
   <!--item still belongs to items which need to use at least one way binding{{}}-->
   <!--use *ngIf to do the decide the span label will be created or not-->
-  <mat-list-item ><mat-checkbox [checked]="item.done" id="item.id">{{item.value}}</mat-checkbox><a mat-button>Delete</a><span *ngIf="item.done">Already Finished</span></mat-list-item>
+  <!--use json as parameter , the property's name/key is our adding class, property's value is a boolean value to decide whether our style class will be add or not-->
+  <!--example:[ngClass]="{'classA': true, 'classB': false}"-->
+  <mat-list-item ><mat-checkbox [checked]="item.done" id="item.id" [ngClass]="{'done':item.done}">{{item.value}}</mat-checkbox><a mat-button>Delete</a><span *ngIf="item.done">Already Finished</span></mat-list-item>
 </mat-list>
 
 <div>

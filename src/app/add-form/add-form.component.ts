@@ -28,4 +28,7 @@ export class AddFormComponent implements OnInit {
   public changeTodoText($event: KeyboardEvent) {
     this.todoText = ($event.target as HTMLInputElement).value;
   }
+  public getBlueClass() {
+    return 'blue';
+  }
 }
