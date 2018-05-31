@@ -1,5 +1,13 @@
+<!--normal way to do the list can not iterative-->
 <mat-list>
   <mat-list-item><mat-checkbox>Todo Item 1</mat-checkbox><a mat-button>Delete</a></mat-list-item>
   <mat-list-item><mat-checkbox>Todo Item 2</mat-checkbox><a mat-button>Delete</a></mat-list-item>
   <mat-list-item><mat-checkbox>Todo Item 3</mat-checkbox><a mat-button>Delete</a></mat-list-item>
+</mat-list>
+<!--using ng-for to do the iterator-->
+<h2>Using *ngFor to do the iterator</h2>
+<mat-list *ngFor="let item of items">
+  <!--item still belongs to items which need to use at least one way binding{{}}-->
+  <!--use *ngIf to do the decide the span label will be created or not-->
+  <mat-list-item ><mat-checkbox [checked]="item.done" id="item.id">{{item.value}}</mat-checkbox><a mat-button>Delete</a><span *ngIf="item.done">Already Finished</span></mat-list-item>
 </mat-list>
