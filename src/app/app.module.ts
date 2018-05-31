@@ -14,6 +14,7 @@ import {MatInputModule} from '@angular/material/input';
 import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
+import {TodoListService} from './todo-list.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -33,7 +34,7 @@ import {MatCheckboxModule} from '@angular/material/checkbox';
     MatListModule,
     MatCheckboxModule
   ],
-  providers: [],
+  providers: [TodoListService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
