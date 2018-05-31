@@ -5,8 +5,10 @@
     <input matInput [placeholder]=placeholder type="text" (input)="changeTodoText($event)">
   </mat-form-field>
   <mat-form-field class="input">
-    <!--[(ngModel)]  is a old way to do the two way binding and ngModel will be deprecated in version 7 when you using reactive form with form control-->
+    <!--[(ngModel)]  is a old way to do the two way binding-->
     <!--Using [(ngModel)] needs to import FormsModule-->
+    <!--Don't use [(ngModel)] in reactive form, use form control to replace it-->
+    <!--ngModel will be deprecated in version 7 when you using reactive form with form control-->
     <input matInput [placeholder]=placeholder [(ngModel)]="todoText2" name="todoText2">
   </mat-form-field>
 </form>
