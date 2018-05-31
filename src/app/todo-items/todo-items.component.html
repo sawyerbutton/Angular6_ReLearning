@@ -11,3 +11,9 @@
   <!--use *ngIf to do the decide the span label will be created or not-->
   <mat-list-item ><mat-checkbox [checked]="item.done" id="item.id">{{item.value}}</mat-checkbox><a mat-button>Delete</a><span *ngIf="item.done">Already Finished</span></mat-list-item>
 </mat-list>
+
+<div>
+  <strong>Test strong tag in TodoItem component</strong>
+  <br>
+  <span class="blue">Test blue class in the span tag</span>
+</div>
