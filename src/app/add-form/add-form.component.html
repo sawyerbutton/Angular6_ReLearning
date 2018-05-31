@@ -1,6 +1,14 @@
 <form class="add-form">
   <mat-form-field class="input">
-    <input matInput placeholder="please input" type="text">
+    <!--Using [Dom property] to make a property binding also a one way binging from component to dom-->
+    <!--(input) is a property binding, using for deliver the input value to todoText-->
+    <input matInput [placeholder]=placeholder type="text" (input)="changeTodoText($event)">
+  </mat-form-field>
+  <mat-form-field class="input">
+    <!--[(ngModel)]  is a old way to do the two way binding and ngModel will be deprecated in version 7 when you using reactive form with form control-->
+    <!--Using [(ngModel)] needs to import FormsModule-->
+    <input matInput [placeholder]=placeholder [(ngModel)]="todoText2" name="todoText2">
   </mat-form-field>
 </form>
-<button mat-raised-button color="primary">Add</button>
+<!--$event is for using event binding one way binding from dom to component-->
+<button mat-raised-button color="primary" (click)="addTodo($event)">Add</button>

@@ -6,10 +6,13 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-
+  public title = 'Welcome to Angular 6 todo app';
   constructor() { }
 
   ngOnInit() {
   }
 
+  public getDate() {
+    return (new Date());
+  }
 }
