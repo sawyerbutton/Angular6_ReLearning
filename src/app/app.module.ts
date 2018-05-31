@@ -3,19 +3,27 @@ import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
+import { AddFormComponent } from './add-form/add-form.component';
+import { TodoItemsComponent } from './todo-items/todo-items.component';
 // Material module
 import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatIconModule} from '@angular/material/icon';
+import {MatInputModule} from '@angular/material/input';
+import {MatButtonModule} from '@angular/material/button';
 @NgModule({
   declarations: [
     AppComponent,
-    HeaderComponent
+    HeaderComponent,
+    AddFormComponent,
+    TodoItemsComponent
   ],
   imports: [
     BrowserModule,
     // Material Modules
     MatToolbarModule,
     MatIconModule,
+    MatInputModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]
