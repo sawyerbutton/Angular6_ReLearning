@@ -9,3 +9,19 @@
 .done{
   text-decoration: line-through;
 }
+
+.text-danger{
+  background-color: red;
+}
+
+.text-warning{
+  background-color: yellow;
+}
+
+.bg-info{
+  color:gray;
+}
+
+.bg-success{
+  color:purple;
+}
