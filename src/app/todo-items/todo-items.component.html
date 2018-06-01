@@ -23,7 +23,8 @@
   <!--<mat-list-item ><mat-checkbox [checked]="item.done" id="item.id" [ngClass]="{'done':item.done,'text-danger':firstRecord, 'text-warning': lastRecotd, 'bg-info': evenRecord, 'bg-success': oddRecord}" (click)="itemClick(item)">{{recordIndex}}.{{item.value}}</mat-checkbox><a mat-button (click)="deleteItem(item)">Delete</a><span *ngIf="item.done">Already Finished</span></mat-list-item>-->
   <mat-list *ngFor="let item of getTodoList()">
     <!--{{item.id | date}} date is a pipe for transfer item.id a new Date() to a reasonable value-->
-    <mat-list-item><mat-checkbox [checked]="item.done" id="item.id" (click)="itemClick(item)">{{item.id | date}}</mat-checkbox><a mat-button (click)="deleteItem(item)">Delete</a><span *ngIf="item.done">Already Finished</span></mat-list-item>
+    <!--added a todo done pipe on the {{item.done}}-->
+    <mat-list-item><mat-checkbox [checked]="item.done" id="item.id" (click)="itemClick(item)">{{item.id | date}}</mat-checkbox><a mat-button (click)="deleteItem(item)">Delete</a><!--<span *ngIf="item.done">Already Finished</span>--><span>{{item.done | todoDone:true}}</span></mat-list-item>
 </mat-list>
 
 <div>

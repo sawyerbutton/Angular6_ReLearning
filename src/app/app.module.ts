@@ -16,12 +16,14 @@ import {MatButtonModule} from '@angular/material/button';
 import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {TodoListService} from './todo-list.service';
+import { TodoDonePipe } from './todo-done.pipe';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AddFormComponent,
-    TodoItemsComponent
+    TodoItemsComponent,
+    TodoDonePipe
   ],
   imports: [
     BrowserModule,
