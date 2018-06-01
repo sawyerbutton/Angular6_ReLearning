@@ -54,5 +54,6 @@ export class TodoListService {
   }
   toggleItemStatus(item: TodoItem) {
     item.done = !item.done;
+    this.todoItems = [...this.todoItems];
   }
 }

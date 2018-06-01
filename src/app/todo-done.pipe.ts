@@ -1,7 +1,8 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'todoDone'
+  name: 'todoDone',
+  // pure:false this will call impure mode for angular pipe and make angular detect pipe content more times and lower the efficiency
 })
 export class TodoDonePipe implements PipeTransform {
 
