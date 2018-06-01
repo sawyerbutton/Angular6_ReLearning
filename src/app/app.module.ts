@@ -17,13 +17,15 @@ import {MatListModule} from '@angular/material/list';
 import {MatCheckboxModule} from '@angular/material/checkbox';
 import {TodoListService} from './todo-list.service';
 import { TodoDonePipe } from './todo-done.pipe';
+import { BsButtonDirective } from './bs-button.directive';
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     AddFormComponent,
     TodoItemsComponent,
-    TodoDonePipe
+    TodoDonePipe,
+    BsButtonDirective
   ],
   imports: [
     BrowserModule,
