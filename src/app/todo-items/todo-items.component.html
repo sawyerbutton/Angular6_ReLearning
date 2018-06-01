@@ -15,14 +15,15 @@
 <!--use these parameters, you can easily modified your *ngFor structure-->
 
   <!--five parameters in *ngFor-->
-<!--<mat-list *ngFor="let item of getTodoList();let recordIndex = index;let firstRecord = first;let lastRecotd = last; let evenRecord = even; let oddRecord = odd">-->
+<!--<mat-list *ngFor="let item of getTodoList();let recordIndex = index;let firstRecord = first;let lastRecord = last; let evenRecord = even; let oddRecord = odd">-->
   <!--item still belongs to items which need to use at least one way binding{{}}-->
   <!--use *ngIf to do the decide the span label will be created or not-->
   <!--use json as parameter , the property's name/key is our adding class, property's value is a boolean value to decide whether our style class will be add or not-->
   <!--example:[ngClass]="{'classA': true, 'classB': false}"-->
   <!--<mat-list-item ><mat-checkbox [checked]="item.done" id="item.id" [ngClass]="{'done':item.done,'text-danger':firstRecord, 'text-warning': lastRecotd, 'bg-info': evenRecord, 'bg-success': oddRecord}" (click)="itemClick(item)">{{recordIndex}}.{{item.value}}</mat-checkbox><a mat-button (click)="deleteItem(item)">Delete</a><span *ngIf="item.done">Already Finished</span></mat-list-item>-->
   <mat-list *ngFor="let item of getTodoList()">
-    <mat-list-item><mat-checkbox [checked]="item.done" id="item.id" (click)="itemClick(item)"></mat-checkbox><a mat-button (click)="deleteItem(item)">Delete</a><span *ngIf="item.done">Already Finished</span></mat-list-item>
+    <!--{{item.id | date}} date is a pipe for transfer item.id a new Date() to a reasonable value-->
+    <mat-list-item><mat-checkbox [checked]="item.done" id="item.id" (click)="itemClick(item)">{{item.id | date}}</mat-checkbox><a mat-button (click)="deleteItem(item)">Delete</a><span *ngIf="item.done">Already Finished</span></mat-list-item>
 </mat-list>
 
 <div>
